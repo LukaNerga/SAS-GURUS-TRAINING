@@ -1,3 +1,9 @@
+/*	Homework 1
+	17 July 2026
+	Luka Nergadze */
+	
+/*Excercise 1*/	
+
 proc import
 	datafile="/home/u64552486/sasuser.v94/Homework1.xlsx"
 	out= SALARY
@@ -8,6 +14,7 @@ proc import
 	getnames=yes;
 run;
 
+/*Excercise 2*/
 data patients(Label= "Homework 1 Exercise 2") ; 
 	
 	input
@@ -39,6 +46,7 @@ Margarita  Afrikyan       44 Female Treatment 1 37,3 164               72.7
 ;
 run; 
 
+/*Excercise 3A*/
 data a3(Label= "Homework 1 Exercise 3A");
 	input
 		ID $ 5-7
@@ -60,6 +68,7 @@ data a3(Label= "Homework 1 Exercise 3A");
 ;
 run;
 
+/*Excercise 3B*/
 data b3(label="Homework 1 Exercise 3b");
 	infile datalines dlm= '/';
 	input SUBJID $ Weight Gender $ Height @@;
@@ -70,6 +79,7 @@ data b3(label="Homework 1 Exercise 3b");
 ;
 run;
 
+/*Excercise 4*/
 data txt4(label="Homework 1 Exercise 4");
     infile "/home/u64552486/sasuser.v94/homework1.txt" dlm='%';
     input Age Weight Height Gender $ Allergic $;
