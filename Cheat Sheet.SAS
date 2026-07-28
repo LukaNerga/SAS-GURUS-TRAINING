@@ -24,3 +24,20 @@ DATA GOES HERE
 run;
 
 
+
+/*Library*/
+Libname LIBNAME "Path";
+
+Data LibName.Varname;
+
+
+/*Formatting*/
+Proc Format;
+	Value Formatname /* NEEDS $ if we are doing char to char */
+	OPTIONS;
+run;
+
+
+format VariableName format. 
+	;
+
